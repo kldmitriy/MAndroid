@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="font_big">24sp</dimen>
+    <dimen name="font_medium">18sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_button">16sp</dimen>
+    <dimen name="button_height_big">55dp</dimen>
+    <dimen name="button_radius">6dp</dimen>
+    <dimen name="button_border_size">3dp</dimen>
+    <dimen name="element_max_width">200dp</dimen>
+</resources>
