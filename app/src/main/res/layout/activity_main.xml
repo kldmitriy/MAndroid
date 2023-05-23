@@ -34,16 +34,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_avatar"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="centerInside"
+        android:layout_centerInParent= "true"
         android:src="@drawable/avatar"
         app:layout_constraintBottom_toTopOf="@id/text_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_settings" />
+        app:layout_constraintTop_toBottomOf="@id/text_settings"
+        android:padding="@dimen/avatar_padding"
+        />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_name"
@@ -55,7 +57,9 @@
         android:textSize="@dimen/font_medium"
         app:fontFamily="@font/open_sans"
         app:layout_constraintTop_toBottomOf="@id/img_avatar"
-        app:layout_constraintBottom_toTopOf="@id/text_career"/>
+        app:layout_constraintBottom_toTopOf="@id/text_career"
+        android:paddingBottom="@dimen/small_margin"
+        />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_career"
@@ -67,7 +71,8 @@
         android:textSize="@dimen/font_normal"
         app:fontFamily="@font/open_sans"
         app:layout_constraintTop_toBottomOf="@id/text_name"
-        app:layout_constraintBottom_toTopOf="@id/text_address" />
+        app:layout_constraintBottom_toTopOf="@id/text_address"
+        android:paddingBottom="@dimen/screen_padding"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_address"
