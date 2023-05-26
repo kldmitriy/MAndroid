@@ -4,13 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/top_dark_blue"
     tools:context=".SignUp">
 
-    <View
-        android:id="@+id/topView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/top_dark_blue" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_top"
@@ -168,8 +164,7 @@
             app:layout_constraintBottom_toTopOf="@id/text_terms_and_conditions"
             app:strokeColor="@color/button_orange"
             app:strokeWidth="@dimen/button_border_size"
-            tools:layout_editor_absoluteX="16dp"
-            android:onClick="onClickRegister"
+
             />
 
         <com.google.android.material.textview.MaterialTextView
