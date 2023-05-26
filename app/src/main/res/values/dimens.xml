@@ -9,7 +9,8 @@
     <dimen name="font_button">16sp</dimen>
     <dimen name="button_height_big">55dp</dimen>
     <dimen name="button_radius">6dp</dimen>
-    <dimen name="button_border_size">3dp</dimen>
+    <dimen name="button_border_size">2dp</dimen>
     <dimen name="element_max_width">200dp</dimen>
     <dimen name="avatar_padding">25dp</dimen>
+    <dimen name="button_edit_profile">40dp</dimen>
 </resources>

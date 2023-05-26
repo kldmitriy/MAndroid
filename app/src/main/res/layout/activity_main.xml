@@ -22,162 +22,146 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/screen_padding"
-        android:text="@string/label_settings"
-        android:textColor="@color/text_white"
-        android:textSize="@dimen/font_big"
-        app:fontFamily="@font/open_sans"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_avatar"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_centerInParent= "true"
-        android:src="@drawable/avatar"
-        app:layout_constraintBottom_toTopOf="@id/text_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_settings"
-        android:padding="@dimen/avatar_padding"
-        />
+        android:padding="@dimen/screen_padding"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".SignUpActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/label_name"
-        android:textAlignment="center"
-        android:textColor="@color/text_white"
-        android:textSize="@dimen/font_medium"
-        app:fontFamily="@font/open_sans"
-        app:layout_constraintTop_toBottomOf="@id/img_avatar"
-        app:layout_constraintBottom_toTopOf="@id/text_career"
-        android:paddingBottom="@dimen/small_margin"
-        />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_career"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/label_career"
-        android:textAlignment="center"
-        android:textColor="@color/text_gray"
-        android:textSize="@dimen/font_normal"
-        app:fontFamily="@font/open_sans"
-        app:layout_constraintTop_toBottomOf="@id/text_name"
-        app:layout_constraintBottom_toTopOf="@id/text_address"
-        android:paddingBottom="@dimen/screen_padding"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/screen_padding"
-        android:text="@string/label_address"
-        android:textAlignment="center"
-        android:textColor="@color/text_gray"
-        android:textSize="@dimen/font_normal"
-        app:fontFamily="@font/open_sans"
-        app:layout_constraintTop_toBottomOf="@id/text_career"
-        app:layout_constraintBottom_toTopOf="@id/center_guideline" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ic_facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/screen_padding"
-        android:src="@drawable/ic_facebook"
-        app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
-        app:layout_constraintEnd_toStartOf="@id/ic_linkedin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/center_guideline"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ic_linkedin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/screen_padding"
-        android:src="@drawable/ic_linkedin"
-        app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
-        app:layout_constraintEnd_toStartOf="@id/ic_instagram"
-        app:layout_constraintStart_toEndOf="@id/ic_facebook"
-        app:layout_constraintTop_toBottomOf="@id/center_guideline"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ic_instagram"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/screen_padding"
-        android:src="@drawable/ic_instagram"
-        app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ic_linkedin"
-        app:layout_constraintTop_toBottomOf="@id/center_guideline"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <!--    <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_edit_profile"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_settings"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/screen_padding"
-            app:cornerRadius="@dimen/button_radius"
-            app:strokeColor="@color/black"
-            app:strokeWidth="@dimen/button_border_size"
-            android:backgroundTint="@color/white"
+            android:text="@string/label_settings"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/font_big"
+            app:fontFamily="@font/open_sans"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/avatar_padding"
+            android:src="@drawable/avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/text_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:text="@string/label_name"
+            android:textAlignment="center"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/font_medium"
+            app:fontFamily="@font/open_sans"
+            app:layout_constraintBottom_toTopOf="@id/text_career"
+            app:layout_constraintTop_toBottomOf="@id/img_avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_career"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/screen_padding"
+            android:text="@string/label_career"
+            android:textAlignment="center"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_normal"
+            app:fontFamily="@font/open_sans"
+            app:layout_constraintBottom_toTopOf="@id/text_address"
+            app:layout_constraintTop_toBottomOf="@id/text_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_address"
+            android:textAlignment="center"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_normal"
+            app:fontFamily="@font/open_sans"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_career" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/screen_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_top"
+        tools:context=".SignUpActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_facebook"
+            app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
+            app:layout_constraintEnd_toStartOf="@id/ic_linkedin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_linkedin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_linkedin"
+            app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
+            app:layout_constraintEnd_toStartOf="@id/ic_instagram"
+            app:layout_constraintStart_toEndOf="@id/ic_facebook"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_instagram"
+            app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_linkedin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_edit_profile"
+            android:layout_marginBottom="@dimen/screen_padding"
+            android:background="@drawable/button_border"
             android:text="@string/button_edit_profile"
+            android:textAllCaps="false"
             android:textColor="@color/button_black"
             android:textSize="@dimen/font_normal"
             app:fontFamily="@font/open_sans"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toTopOf="@+id/button_view_my_contact"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/button_view_my_contact" />
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_view_my_contact"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/button_view_contacts_height"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_big"
+            android:background="@drawable/button_round"
             android:text="@string/button_view"
             android:textColor="@color/white"
             android:textSize="@dimen/font_button"
             app:fontFamily="@font/open_sans"
-            app:cornerRadius="@dimen/button_radius"
-            android:backgroundTint="@color/button_view_contact"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="@dimen/screen_padding"/> -->
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_edit_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/screen_padding"
-        android:background="@drawable/button_border"
-        android:text="@string/button_edit_profile"
-        android:textAllCaps="false"
-        android:textColor="@color/button_black"
-        android:textSize="@dimen/font_normal"
-        app:fontFamily="@font/open_sans"
-        app:layout_constraintBottom_toTopOf="@+id/button_view_my_contact" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_view_my_contact"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height_big"
-        android:layout_margin="@dimen/screen_padding"
-        android:background="@drawable/button_round"
-        android:text="@string/button_view"
-        android:textColor="@color/white"
-        android:textSize="@dimen/font_button"
-        app:fontFamily="@font/open_sans"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
