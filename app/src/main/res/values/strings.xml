@@ -17,8 +17,6 @@
     <string name="hint_password">Password</string>
     <string name="label_remember_me">Remember me</string>
     <string name="label_fill_out_the_profile">Fill out the profile and go to the application!</string>
-    <string name="REGEX_PASSWORD_MATCH">([a-zA-Z])(\\d)|(\\d)([a-zA-Z])</string>
-    <string name="GLOBAL_EMAIL">email</string>
     <string name="EMAIL_ERROR">Enter correct email</string>
     <string name="ERROR_SHORT_PASSWORD">Password must be at least 8 characters</string>
     <string name="ERROR_NOT_VALID_PASSWORD">Password must contain numbers and letters</string>

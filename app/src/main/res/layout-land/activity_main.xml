@@ -35,6 +35,13 @@
         app:layout_constraintGuide_begin="@dimen/normal_padding" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glVerticalRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,8 +52,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/first_background_color"
-        app:layout_constraintBottom_toTopOf="@id/glHorizontalMiddle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/glHorizontalBottom"
+        app:layout_constraintEnd_toStartOf="@id/glVerticalMiddle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,10 +61,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/second_background_color"
-        app:layout_constraintTop_toTopOf="@id/glHorizontalMiddle"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="@id/glVerticalMiddle"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_settings"
@@ -78,16 +85,16 @@
         android:padding="@dimen/avatar_padding"
         android:src="@drawable/avatar"
         app:layout_constraintBottom_toTopOf="@id/text_name"
-        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"
-        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintEnd_toStartOf="@id/glVerticalMiddle"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toEndOf="@id/glVerticalLeft"
         app:layout_constraintTop_toBottomOf="@id/glHorizontalTop"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintWidth_percent="0.25" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_name"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_margin"
         android:text="@string/label_name"
@@ -98,11 +105,11 @@
         app:layout_constraintBottom_toTopOf="@id/text_career"
         app:layout_constraintTop_toBottomOf="@id/img_avatar"
         app:layout_constraintStart_toEndOf="@id/glVerticalLeft"
-        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"/>
+        app:layout_constraintEnd_toStartOf="@id/glVerticalMiddle"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_career"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/normal_padding"
         android:text="@string/label_career"
@@ -113,30 +120,30 @@
         app:layout_constraintBottom_toTopOf="@id/text_address"
         app:layout_constraintTop_toBottomOf="@id/text_name"
         app:layout_constraintStart_toEndOf="@id/glVerticalLeft"
-        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"/>
+        app:layout_constraintEnd_toStartOf="@id/glVerticalMiddle"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_address"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/label_address"
         android:textAlignment="center"
         android:textColor="@color/text_secondary_color"
         android:textSize="@dimen/font_normal"
         app:fontFamily="@font/open_sans"
-        app:layout_constraintBottom_toTopOf="@id/glHorizontalMiddle"
+        app:layout_constraintBottom_toTopOf="@id/glHorizontalBottom"
         app:layout_constraintTop_toBottomOf="@id/text_career"
         app:layout_constraintStart_toEndOf="@id/glVerticalLeft"
-        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"/>
+        app:layout_constraintEnd_toStartOf="@id/glVerticalMiddle"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ic_facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_facebook"
-        app:layout_constraintTop_toTopOf="@id/glHorizontalMiddle"
+        app:layout_constraintTop_toTopOf="@id/glHorizontalTop"
         app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
-        app:layout_constraintStart_toEndOf="@id/glVerticalLeft"
+        app:layout_constraintStart_toEndOf="@id/glVerticalMiddle"
         app:layout_constraintEnd_toStartOf="@id/ic_linkedin"
         app:layout_constraintVertical_bias="0.3" />
 
@@ -145,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_linkedin"
-        app:layout_constraintTop_toTopOf="@id/glHorizontalMiddle"
+        app:layout_constraintTop_toTopOf="@id/glHorizontalTop"
         app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
         app:layout_constraintEnd_toStartOf="@id/ic_instagram"
         app:layout_constraintStart_toEndOf="@id/ic_facebook"
@@ -156,7 +163,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_instagram"
-        app:layout_constraintTop_toTopOf="@id/glHorizontalMiddle"
+        app:layout_constraintTop_toTopOf="@id/glHorizontalTop"
         app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
         app:layout_constraintEnd_toEndOf="@id/glVerticalRight"
         app:layout_constraintStart_toEndOf="@id/ic_linkedin"
@@ -167,6 +174,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/button_edit_profile"
         android:layout_marginBottom="@dimen/normal_padding"
+        android:layout_marginStart="@dimen/normal_padding"
         android:background="@drawable/button_border"
         android:text="@string/button_edit_profile"
         android:textAllCaps="false"
@@ -174,20 +182,21 @@
         android:textSize="@dimen/font_normal"
         app:fontFamily="@font/open_sans"
         app:layout_constraintBottom_toTopOf="@+id/button_view_my_contact"
-        app:layout_constraintStart_toEndOf="@id/glVerticalLeft"
+        app:layout_constraintStart_toEndOf="@id/glVerticalMiddle"
         app:layout_constraintEnd_toStartOf="@id/glVerticalRight"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_view_my_contact"
         android:layout_width="0dp"
         android:layout_height="@dimen/button_height_big"
+        android:layout_marginStart="@dimen/normal_padding"
         android:background="@drawable/button_round"
         android:text="@string/button_view"
         android:textColor="@color/button_invert_color"
         android:textSize="@dimen/font_button"
         app:fontFamily="@font/open_sans"
         app:layout_constraintBottom_toBottomOf="@id/glHorizontalBottom"
-        app:layout_constraintStart_toEndOf="@id/glVerticalLeft"
+        app:layout_constraintStart_toEndOf="@id/glVerticalMiddle"
         app:layout_constraintEnd_toStartOf="@id/glVerticalRight"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,26 +1,29 @@
 package com.shpp.mandroid.task1
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.textfield.TextInputEditText
+import com.shpp.mandroid.task1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out)
 
         displayName()
     }
 
     private fun displayName() {
-        val textviewName = findViewById<TextView>(R.id.text_name)
-        textviewName.text = parseEmail(intent.getStringExtra(getString(R.string.GLOBAL_EMAIL)))
+        binding.textName.text = parseEmail(intent.getStringExtra(Constants.INTENT_KEY_EMAIL))
     }
 
-    private fun parseEmail(email: String?): CharSequence? {
-        return Regex("""@[\w.]*""").replace(email.toString(), "").
-            replace(".", " ")
+    private fun parseEmail(email: String?): String {
+        return Regex("""@[\w.]*""").replace(email.toString(), "")
+            .split(".")
+            .joinToString(" ") { word -> word.replaceFirstChar { it.uppercase() }}
     }
 }

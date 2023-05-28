@@ -9,7 +9,7 @@
     <string name="already_have_an_account">Вже є акаунт?</string>
     <string name="label_sign_in">Увійти</string>
     <string name="label_terms_and_conditions">Натиснувши «Реєстрація», ви погоджуєтеся з нашими Умовами</string>
-    <string name="register">РЕГІСТРАЦІЯ</string>
+    <string name="register">РЕЄСТРАЦІЯ</string>
     <string name="label_or">або</string>
     <string name="button_google">GOOGLE</string>
     <string name="label_lets_get_acquainted">Давайте знайомитись</string>
@@ -17,8 +17,6 @@
     <string name="hint_password">Пароль</string>
     <string name="label_remember_me">Запам\'ятати мене</string>
     <string name="label_fill_out_the_profile">Заповніть профіль і переходьте до застосунку!</string>
-    <string name="REGEX_PASSWORD_MATCH">([a-zA-Z])(\\d)|(\\d)([a-zA-Z])</string>
-    <string name="GLOBAL_EMAIL">email</string>
     <string name="EMAIL_ERROR">Введіть коректний email</string>
     <string name="ERROR_SHORT_PASSWORD">Пароль повинен бути не меньше 8 символів</string>
     <string name="ERROR_NOT_VALID_PASSWORD">Пароль повинен містити цифри і букви</string>

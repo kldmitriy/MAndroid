@@ -2,12 +2,25 @@
 <resources>
     <style name="edit_hint" parent="Theme.AppCompat.Light">
         <item name="android:textSize">@dimen/font_normal</item>
-        <item name="android:textColor">@color/text_gray</item>
-        <item name="hintTextColor">@color/text_white</item>
     </style>
 
-    <style name="edit_line" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">@color/text_gray</item>
-        <item name="colorControlActivated">@color/white</item>
+    <style name="edit_error" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="input_layout_theme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/button_invert_color</item>
+        <item name="colorControlActivated">@color/button_invert_color</item>
+        <item name="colorError">@color/edit_error_color</item>
+        <item name="boxStrokeColor">@color/edit_hint_color</item>
+    </style>
+
+    <style name="text_input_layout_style" parent="Theme.AppCompat.Light">
+        <item name="errorEnabled">true</item>
+        <item name="expandedHintEnabled">false</item>
+        <item name="hintTextAppearance">@style/edit_hint</item>
+        <item name="android:textColorHint">@color/edit_hint_color</item>
+        <item name="errorTextAppearance">@style/edit_error</item>
+        <item name="android:theme">@style/input_layout_theme</item>
     </style>
 </resources>

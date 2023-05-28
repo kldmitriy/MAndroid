@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="top_dark_blue">#242235</color>
-    <color name="text_white">#FAFAFA</color>
-    <color name="text_gray">#B2B2B3</color>
-    <color name="button_black">#18181F</color>
+    <color name="button_invert_color">#FFFFFFFF</color>
+    <color name="first_background_color">#242235</color>
+    <color name="text_main_color">#FAFAFA</color>
+    <color name="text_secondary_color">#B2B2B3</color>
+    <color name="button_main_color">#18181F</color>
     <color name="button_orange">#FB5E06</color>
+    <color name="edit_hint_color">#BDBDBD</color>
+    <color name="edit_error_color">#F93E3E</color>
+    <color name="second_background_color">#FFFFFF</color>
+
+
 </resources>

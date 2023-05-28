@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="button_invert_color">#AAAAAA</color>
+    <color name="first_background_color">#000000</color>
+    <color name="text_main_color">#B2B2B2</color>
+    <color name="text_secondary_color">#585858</color>
+    <color name="button_main_color">#000000</color>
+    <color name="button_orange">#AB2E06</color>
+    <color name="edit_hint_color">#585858</color>
+    <color name="edit_error_color">#A9083E</color>
+    <color name="second_background_color">#000000</color>
+</resources>
