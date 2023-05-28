@@ -181,7 +181,7 @@
         android:id="@+id/button_view_my_contact"
         android:layout_width="0dp"
         android:layout_height="@dimen/button_height_big"
-        android:background="@drawable/button_round"
+        android:background="@drawable/button_view_contacts"
         android:text="@string/button_view"
         android:textColor="@color/button_invert_color"
         android:textSize="@dimen/font_button"
